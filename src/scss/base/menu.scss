@@ -67,7 +67,10 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: #000;
+            background-color: $bgGold;
+            .menu-open & {
+			    background-color: #fff;
+            }
 		}
 		&::before {
 			top: 0;

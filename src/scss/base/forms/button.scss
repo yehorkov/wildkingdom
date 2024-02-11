@@ -10,9 +10,6 @@
     font-weight: 300;
     line-height: 156.25%; /* 25/16 */
     border-radius: toRem(50);
-	&--fw {
-		width: 100%;
-	}
     &::before {
         content:'';
         position: absolute;
@@ -24,11 +21,25 @@
         opacity: 0.5;
         background: url('@img/bg-button.jpg') center no-repeat;
     }
+	&--fw {
+		width: 100%;
+	}
+    &--border {
+        transition: all 0.3s ease 0s;
+        border: toRem(1) solid $bgGold;
+        background-color: transparent;
+        color: $bgGold;
+        &::before {
+            opacity: 0;
+        }
+    }
     span {
         position: relative;
     }
     @media (any-hover: hover) {
 		&:hover {
+            color: $mainColor;
+            border: toRem(1) solid transparent;
             &::before {
                 opacity: 1;
             }
